@@ -352,3 +352,20 @@ footer {
         float:left;
     }
 }
+/* Estilo padrão do banner (para desktop) */
+.banner {
+  width: 100%;
+  height: 250px;
+  background-image: url('img/banner-analandia.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Ajuste do banner para telas menores (ex: celulares) */
+@media (max-width: 600px) {
+  .banner {
+    height: 150px; /* altura reduzida no celular */
+    background-position: center top; /* opcional: mostra mais do topo da imagem */
+  }
+}
