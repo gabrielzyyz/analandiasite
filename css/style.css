@@ -484,3 +484,28 @@ img {
   }
 }
 
+header {
+  display: block !important;    /* Garante que o header seja exibido */
+  position: relative;            /* Posicionamento padrão */
+  width: 100%;                  /* Ocupa a largura total da tela */
+  z-index: 9999;                /* Fica na frente de quase tudo */
+  background-color: #fff;       /* Fundo branco para ficar legível */
+  padding: 10px 20px;           /* Espaçamento interno */
+  box-sizing: border-box;       /* Inclui padding na largura */
+  color: #000;                  /* Cor do texto */
+}
+
+/* Se quiser que o header fique fixo no topo no celular (opcional) */
+@media (max-width: 767px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  /* Ajustar o conteúdo abaixo para não ficar escondido atrás do header fixo */
+  body {
+    padding-top: 60px; /* ajuste conforme a altura do seu header */
+  }
+}
