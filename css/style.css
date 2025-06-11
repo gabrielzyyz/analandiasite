@@ -362,7 +362,7 @@ footer {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  dding-top: 70px; /* ajuste para altura do header */
+  padding-top: 70px; /* ajuste para altura do header */
 }
 @media (max-width: 600px) {
   .banner {
