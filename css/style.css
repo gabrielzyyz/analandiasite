@@ -485,27 +485,37 @@ img {
 }
 
 header {
-  display: block !important;    /* Garante que o header seja exibido */
-  position: relative;            /* Posicionamento padrão */
-  width: 100%;                  /* Ocupa a largura total da tela */
-  z-index: 9999;                /* Fica na frente de quase tudo */
-  background-color: #fff;       /* Fundo branco para ficar legível */
-  padding: 10px 20px;           /* Espaçamento interno */
-  box-sizing: border-box;       /* Inclui padding na largura */
-  color: #000;                  /* Cor do texto */
+  display: flex !important;       /* Exibe o header como flex para organizar os itens */
+  position: relative;              /* Posição padrão, sem fixar */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente para legibilidade */
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 9999;                  /* Para ficar acima dos outros elementos */
+  color: #000;
+  flex-wrap: wrap;                /* Quebra linha no celular para não sumir nada */
+  justify-content: center;        /* Centraliza os itens */
 }
 
-/* Se quiser que o header fique fixo no topo no celular (opcional) */
+/* Ajustes para nav e links dentro do header */
+header nav {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+header nav a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
 @media (max-width: 767px) {
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  /* Ajustar o conteúdo abaixo para não ficar escondido atrás do header fixo */
-  body {
-    padding-top: 60px; /* ajuste conforme a altura do seu header */
+  header nav a {
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 1em;
   }
 }
