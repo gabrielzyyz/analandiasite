@@ -9,6 +9,8 @@ body {
 }
 
 header {
+    position: fixed;
+  z-index: 1000;
     width: 100%;
 }
 
@@ -360,12 +362,15 @@ footer {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  dding-top: 70px; /* ajuste para altura do header */
 }
-
-/* Ajuste do banner para telas menores (ex: celulares) */
 @media (max-width: 600px) {
   .banner {
-    height: 150px; /* altura reduzida no celular */
-    background-position: center top; /* opcional: mostra mais do topo da imagem */
+    height: 150px; /* mais fino em telas pequenas */
+    background-position: center top;
   }
 }
+main {
+  padding-top: 70px; /* evita sobreposição do header fixo */
+}
+
